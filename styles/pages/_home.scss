@@ -27,7 +27,7 @@ main {
   background: transparent;
   display: flex;
   align-items: center;
-  z-index: 100; 
+  z-index: 100;
 
   &.triggered {
     background: rgba(255, 255, 255, 0.9);
@@ -40,12 +40,14 @@ main {
     @extend .content-width;
     align-items: center;
   }
+
   &__nav {
     @extend .flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     display: none;
+
     @include mq(lg) {
       display: block;
     }
@@ -66,7 +68,7 @@ main {
       margin-right: 0px;
     }
 
-    & > a {
+    &>a {
       color: $cBlack;
       text-decoration: none;
       text-transform: uppercase;
@@ -102,6 +104,7 @@ main {
     @include mq(md) {
       padding: 50px;
     }
+
     @include mq(xl) {
       padding: 50px 150px;
     }
@@ -115,10 +118,12 @@ main {
     @include mq(md) {
       flex-basis: 47%;
     }
+
     @include mq(lg) {
       height: 400px;
     }
-    & > img {
+
+    &>img {
       opacity: 1;
       object-fit: cover;
       width: 100%;
@@ -136,6 +141,7 @@ main {
       align-items: flex-end;
       flex-basis: 47%;
     }
+
     &.inview {
       & .travel__title::before {
         @include animation($name: kf-scaleX, $duration: 0.3s, $delay: 1s)
@@ -146,6 +152,7 @@ main {
 
   &__title {
     position: relative;
+
     &::before {
       display: none;
       content: '';
@@ -175,6 +182,7 @@ main {
   0% {
     transform: scaleX(0);
   }
+
   100% {
     transform: scaleX(1);
   }
@@ -210,6 +218,7 @@ main {
 .popular {
   &__inner {
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -228,6 +237,7 @@ main {
   &__container {
     @extend .content-width;
     @extend .flex;
+
     @include mq(md) {
       justify-content: space-between;
     }
@@ -237,9 +247,11 @@ main {
     @include mq(md) {
       flex-basis: 47%;
     }
+
     @include mq(lg) {
       flex-basis: 25%;
     }
+
     @include mq(xl) {
       flex-basis: 23%;
     }
@@ -255,10 +267,10 @@ main {
     margin-bottom: 5px;
 
     @include mq(lg) {
-    height: 300px;
+      height: 300px;
     }
 
-    & > img {
+    &>img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -297,13 +309,13 @@ main {
       margin-right: 30px;
     }
 
-    & > a {
+    &>a {
       color: $cSubTitle;
       text-decoration: none;
     }
   }
 
-  & > .logo {
+  &>.logo {
     justify-content: center;
 
     @include mq(md) {
@@ -316,6 +328,7 @@ main {
 .logo {
   font-size: 42px;
   display: flex;
+
   &__img {
     width: 0.8em;
   }
@@ -344,7 +357,11 @@ main {
   }
 
   &.left {
-    left: 50px;
+    left: -50px;
+
+    &.inview {
+      left: 50px;
+    }
 
     & .side__inner {
       transform: rotate(-90deg);
@@ -353,7 +370,12 @@ main {
   }
 
   &.right {
-    right: 50px;
+    right: -50px;
+
+    &.inview {
+      right: 50px;
+    }
+
     & .side__inner {
       transform: rotate(90deg);
       transform-origin: top right;

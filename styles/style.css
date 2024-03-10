@@ -1045,6 +1045,9 @@ main {
   letter-spacing: 2px;
 }
 .side.left {
+  left: -50px;
+}
+.side.left.inview {
   left: 50px;
 }
 .side.left .side__inner {
@@ -1052,6 +1055,9 @@ main {
   transform-origin: top left;
 }
 .side.right {
+  right: -50px;
+}
+.side.right.inview {
   right: 50px;
 }
 .side.right .side__inner {
