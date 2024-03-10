@@ -25,5 +25,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   const so2 = new ScrollObserver('.cover-slide', cb2);
+
+  const cb3 = function (el, isIntersecting) {
+    if (isIntersecting) {
+      el.classList.add('inview');
+    } else {
+      el.classList.remove('inview');
+
+    }
+  }
+
+  const so3 = new ScrollObserver('.travel__texts', cb3);
 });
 
