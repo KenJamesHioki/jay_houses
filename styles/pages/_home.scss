@@ -59,11 +59,11 @@ main {
   }
 
   &__li {
-    margin: 10px;
+    margin-right: 10px;
 
     @include mq(md) {
-      margin-left: 0;
-      margin-right: 30px;
+      margin-left: 30px;
+      margin-right: 0px;
     }
 
     & > a {
