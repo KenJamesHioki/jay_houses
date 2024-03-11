@@ -20,7 +20,7 @@ class Main {
 
   _scrollInit() {
       this._observers.push(
-          new ScrollObserver('_main-content', this._sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
+          new ScrollObserver('#main-content', this._sideAnimation.bind(this), { once: false, rootMargin: "-300px 0px" }),
           new ScrollObserver('.nav-trigger', this._navAnimation.bind(this), { once: false }),
           new ScrollObserver('.swiper', this._toggleSlideAnimation.bind(this), { once: false }),
           new ScrollObserver('.cover-slide', this._inviewAnimation),
